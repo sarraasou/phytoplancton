@@ -1,0 +1,100 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator prismaCRUDGenerator {
+  provider = "npx prisma-generator-crud"
+  output   = "./generated"
+}
+
+model User {
+  id            String         @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime?      @updatedAt
+  deletedAt     DateTime?
+  firstName     String?
+  lastName      String?
+  username      String         @unique
+  isValid       Boolean?
+  roles         String[]
+  projects      Project[]
+  annotations   Annotation[]
+  userRole      String?
+  collaborators Collaborator[]
+}
+
+model AppConfig {
+  id        String    @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  deletedAt DateTime?
+  value     String?
+  key       String?   @unique
+}
+
+model Project {
+  id            String         @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime?      @updatedAt
+  deletedAt     DateTime?
+  title         String
+  description   String?
+  tool          String?
+  user          User?          @relation(fields: [userId], references: [id])
+  userId        String?        @default(dbgenerated("requesting_user_id()"))
+  images        Image[]
+  collaborators Collaborator[]
+}
+
+model Image {
+  id          String       @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime?    @updatedAt
+  deletedAt   DateTime?
+  name        String
+  url         String?
+  project     Project      @relation(fields: [projectId], references: [id])
+  projectId   String       
+  annotations Annotation[]
+}
+
+model AiModel {
+  id          String       @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime?    @updatedAt
+  deletedAt   DateTime?
+  name        String
+  type        String
+  annotations Annotation[]
+}
+
+model Annotation {
+  id            String    @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime? @updatedAt
+  deletedAt     DateTime?
+  aimodel       AiModel   @relation(fields: [aimodelId], references: [id])
+  aimodelId     String
+  image         Image     @relation(fields: [imageId], references: [id])
+  imageId       String
+  result        String?
+  url           String?
+  validatedBy   User?     @relation(fields: [validatedById], references: [id])
+  validatedById String?   @default(dbgenerated("requesting_user_id()"))
+}
+
+model Collaborator {
+  id        String    @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  deletedAt DateTime?
+  user      User      @relation(fields: [userId], references: [id])
+  userId    String    @default(dbgenerated("requesting_user_id()"))
+  project   Project   @relation(fields: [projectId], references: [id])
+  projectId String
+}

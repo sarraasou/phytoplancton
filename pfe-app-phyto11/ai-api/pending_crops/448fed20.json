@@ -1,0 +1,17 @@
+{
+  "crop_id": "448fed20",
+  "image_id": "70832d53-fb7c-41c6-84ec-25b3bb6b5e6b",
+  "image_url": "http://adolescent-ethnicity.net",
+  "pred_class": "Alexandrium",
+  "confidence": 0.804,
+  "probabilities": {
+    "Alexandrium": 0.804,
+    "Autres": 0.1176,
+    "Karenia": 0.0784
+  },
+  "created_at": "2026-04-22T11:05:00.355195",
+  "validated": false,
+  "crop_path": "static/results/448fed20.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Alexandrium\\448fed20.jpg",
+  "fname": "448fed20.jpg"
+}

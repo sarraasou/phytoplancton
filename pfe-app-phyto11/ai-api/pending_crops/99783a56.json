@@ -1,0 +1,30 @@
+{
+  "crop_id": "99783a56",
+  "image_id": "308ab95b-de93-4500-b556-01490eb15be9",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1775558070/ub0hzbfxjifsffxlymmd.jpg",
+  "pred_class": "Karenia",
+  "yolo_class": "Alexandrium",
+  "yolo_conf": 0.5587,
+  "confidence": 0.9652,
+  "probabilities": {
+    "Karenia": 0.9652,
+    "Alexandrium": 0.0348,
+    "Autres": 0.0
+  },
+  "has_mask": false,
+  "mask_path": null,
+  "bbox_xyxy": [
+    0.0,
+    44.0,
+    62.4,
+    112.0
+  ],
+  "created_at": "2026-06-07T12:34:51.988670",
+  "validated": true,
+  "crop_path": "static/results/karenia_99783a56_308ab95b-de93-4500-b556-01490eb15be9.jpg",
+  "dataset_path": "/app/dataset/Autres/autres_99783a56_308ab95b-de93-4500-b556-01490eb15be9.jpg",
+  "fname": "autres_99783a56_308ab95b-de93-4500-b556-01490eb15be9.jpg",
+  "confirmed_class": "Autres",
+  "was_correct": false,
+  "validated_at": "2026-06-07T12:36:04.887583"
+}

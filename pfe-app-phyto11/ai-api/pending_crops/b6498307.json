@@ -1,0 +1,21 @@
+{
+  "crop_id": "b6498307",
+  "image_id": "36833962-b62c-416a-83b8-c6cb67535834",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1776506309/w40bxvy81a64rmkctgfd.jpg",
+  "pred_class": "Autres",
+  "confidence": 1.0,
+  "probabilities": {
+    "Alexandrium": 0.0,
+    "Autres": 1.0,
+    "Karenia": 0.0
+  },
+  "crop_path": "static/results/autres_b6498307_36833962-b62c-416a-83b8-c6cb67535834.jpg",
+  "pending_fname": "autres_b6498307_36833962-b62c-416a-83b8-c6cb67535834.jpg",
+  "bbox": [
+    50,
+    53,
+    111,
+    102
+  ],
+  "validated": false
+}

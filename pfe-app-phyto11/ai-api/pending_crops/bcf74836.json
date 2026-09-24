@@ -1,0 +1,15 @@
+{
+  "crop_id": "bcf74836",
+  "image_id": "65f8f152-8d5c-4f21-a8cd-e9810bd31ba7",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1775814054/btydgsjhvk3rwhlmn1vu.jpg",
+  "pred_class": "Karenia",
+  "confidence": 0.975,
+  "probabilities": {
+    "Alexandrium": 0.0125,
+    "Autres": 0.0125,
+    "Karenia": 0.975
+  },
+  "validated": true,
+  "confirmed_class": "Alexandrium",
+  "was_correct": false
+}

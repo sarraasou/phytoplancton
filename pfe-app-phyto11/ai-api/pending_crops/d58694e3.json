@@ -1,0 +1,17 @@
+{
+  "crop_id": "d58694e3",
+  "image_id": "70832d53-fb7c-41c6-84ec-25b3bb6b5e6b",
+  "image_url": "http://adolescent-ethnicity.net",
+  "pred_class": "Autres",
+  "confidence": 0.87,
+  "probabilities": {
+    "Autres": 0.87,
+    "Alexandrium": 0.078,
+    "Karenia": 0.052
+  },
+  "created_at": "2026-04-22T11:05:00.362098",
+  "validated": false,
+  "crop_path": "static/results/d58694e3.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Autres\\d58694e3.jpg",
+  "fname": "d58694e3.jpg"
+}

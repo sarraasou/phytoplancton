@@ -1,0 +1,197 @@
+# ================================================================
+# FICHIER : docker/supabase/volumes/api/kong.yml
+# RÔLE    : Configuration du reverse proxy Kong.
+#           Kong reçoit TOUTES les requêtes HTTP (port 8000) et
+#           les redirige vers le bon service (auth, rest, nestjs…)
+#           Il vérifie aussi les clés API (ANON_KEY / SERVICE_ROLE_KEY)
+# ================================================================
+
+_format_version: "1.1"
+
+# ---------------------------------------------------------------
+# CONSUMERS (Utilisateurs Kong)
+# ---------------------------------------------------------------
+# Kong reconnaît deux "utilisateurs" identifiés par leur clé JWT.
+# ⚠️  Ces clés doivent être IDENTIQUES à ANON_KEY et SERVICE_ROLE_KEY
+#     dans le .env racine ET server/.env — sinon toutes les requêtes
+#     sont rejetées avec 401 Unauthorized
+
+consumers:
+  # Utilisateur public — accès limité (lecture seule sur certaines routes)
+  - username: anon
+    keyauth_credentials:
+      - key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzIyMDAyMDAsImlzcyI6InN1cGFiYXNlIiwicmVmIjoibWFwbm1pbWxteGl0bnpha3ptbnUiLCJleHAiOjIwODc3NzYyMDAsInJvbGUiOiJhbm9uIn0.CDBXHklRE2DMgfT2c_FPY-lkmrNyP9tzDcKVGg5X980
+  # Utilisateur admin — accès complet (routes /admin/*, invite, etc.)
+  - username: service_role
+    keyauth_credentials:
+      - key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzIyMDAyMDAsImlzcyI6InN1cGFiYXNlIiwicmVmIjoibWFwbm1pbWxteGl0bnpha3ptbnUiLCJleHAiOjIwODc3NzYyMDAsInJvbGUiOiJzZXJ2aWNlX3JvbGUifQ.gBOwWRMWys6NHjHqLMLqeLMaEX_x6BBSgcobiSeYSH8
+
+# ---------------------------------------------------------------
+# ACL — Groupes de droits d'accès
+# ---------------------------------------------------------------
+# "anon" → groupe avec droits restreints
+# "admin" → groupe avec droits complets (service_role)
+acls:
+  - consumer: anon
+    group: anon
+  - consumer: service_role
+    group: admin
+
+# Credentials pour accéder au Studio Supabase (interface web)
+basicauth_credentials:
+  - consumer: anon
+    username: root
+    password: root
+
+# ---------------------------------------------------------------
+# SERVICES (Routes HTTP)
+# ---------------------------------------------------------------
+services:
+
+  # --- Studio Supabase (interface d'administration web) ---
+  # Accessible sur http://localhost:8000/
+  # Protégé par basic-auth (login: root / root)
+  - name: studio
+    url: http://studio:3000/
+    routes:
+      - name: studio
+        strip_path: true
+        paths:
+          - /
+    plugins:
+      - name: basic-auth
+        config:
+          hide_credentials: true
+
+  # --- Routes Auth ouvertes (sans clé API requise) ---
+  # Ces 3 routes sont publiques car utilisées par les redirections OAuth
+
+  # Vérification email après inscription/invitation
+  - name: auth-v1-open
+    url: http://auth:9999/verify
+    routes:
+      - name: auth-v1-open
+        strip_path: true
+        paths:
+          - /auth/v1/verify
+    plugins:
+      - name: cors
+
+  # Callback OAuth (Google, GitHub, etc.)
+  - name: auth-v1-open-callback
+    url: http://auth:9999/callback
+    routes:
+      - name: auth-v1-open-callback
+        strip_path: true
+        paths:
+          - /auth/v1/callback
+    plugins:
+      - name: cors
+
+  # Autorisation OAuth
+  - name: auth-v1-open-authorize
+    url: http://auth:9999/authorize
+    routes:
+      - name: auth-v1-open-authorize
+        strip_path: true
+        paths:
+          - /auth/v1/authorize
+    plugins:
+      - name: cors
+
+  # --- Routes Auth sécurisées (clé API requise) ---
+  # Login, signup, invite, reset password, etc.
+  # Accessibles par anon ET admin
+  - name: auth-v1
+    _comment: "GoTrue: /auth/v1/* -> http://auth:9999/*"
+    url: http://auth:9999/
+    routes:
+      - name: auth-v1-all
+        strip_path: true
+        paths:
+          - /auth/v1/
+    plugins:
+      - name: cors
+      - name: key-auth
+        config:
+          hide_credentials: false
+      - name: acl
+        config:
+          hide_groups_header: true
+          allow:
+            - admin
+            - anon
+
+  # --- API REST PostgREST (accès base de données) ---
+  # Requêtes SQL automatiques générées par Supabase
+  - name: rest-v1
+    _comment: "PostgREST: /rest/v1/* -> http://rest:3000/*"
+    url: http://rest:3000/
+    routes:
+      - name: rest-v1-all
+        strip_path: true
+        paths:
+          - /rest/v1/
+    plugins:
+      - name: cors
+      - name: key-auth
+        config:
+          hide_credentials: true
+      - name: acl
+        config:
+          hide_groups_header: true
+          allow:
+            - admin
+            - anon
+
+  # --- Métadonnées PostgreSQL (utilisé par le Studio) ---
+  # Accès réservé aux admins uniquement
+  - name: meta
+    _comment: "pg-meta: /pg/* -> http://pg-meta:8080/*"
+    url: http://meta:8080/
+    routes:
+      - name: meta-all
+        strip_path: true
+        paths:
+          - /pg/
+    plugins:
+      - name: key-auth
+        config:
+          hide_credentials: false
+      - name: acl
+        config:
+          hide_groups_header: true
+          allow:
+            - admin
+
+  # --- Backend NestJS ---
+  # Toutes les requêtes /nest/* sont redirigées vers NestJS
+  # host.docker.internal = votre machine locale vue depuis Docker
+  # port 3005 = port sur lequel NestJS tourne ("npm run start")
+  - name: nest-api
+    url: http://host.docker.internal:3005
+    routes:
+      - name: nest-api-all
+        strip_path: false
+        paths:
+          - /nest/
+    plugins:
+      - name: cors
+        config:
+          origins:
+            - "http://localhost:3001"
+            - "*"
+          methods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
+            - PATCH
+          headers:
+            - Authorization
+            - Content-Type
+            - apikey
+            - X-Requested-With
+          credentials: true
+          max_age: 3600

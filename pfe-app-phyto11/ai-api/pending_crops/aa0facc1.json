@@ -1,0 +1,25 @@
+{
+  "crop_id": "aa0facc1",
+  "image_id": "flr11pmt55758050_portsfax 2019-09-30 20h06_Cropped_With_Scalebar_132",
+  "image_url": "local_upload",
+  "pred_class": "Autres",
+  "confidence": 1.0,
+  "probabilities": {
+    "Alexandrium": 0.0,
+    "Autres": 1.0,
+    "Karenia": 0.0
+  },
+  "crop_path": "static/results/autres_aa0facc1_flr11pmt55758050_portsfax_2019-09-30_20h06_Cropped_With_Scal.jpg",
+  "pending_fname": "autres_aa0facc1_flr11pmt55758050_portsfax_2019-09-30_20h06_Cropped_With_Scal.jpg",
+  "bbox": [
+    43,
+    38,
+    120,
+    117
+  ],
+  "validated": true,
+  "confirmed_class": "Karenia",
+  "was_correct": false,
+  "saved_path": "dataset/Karenia/karenia_aa0facc1_flr11pmt55758050_portsfax_2019-09-30_20h06_Cropped_With_Scal.jpg",
+  "saved_filename": "karenia_aa0facc1_flr11pmt55758050_portsfax_2019-09-30_20h06_Cropped_With_Scal.jpg"
+}

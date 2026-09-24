@@ -1,0 +1,27 @@
+{
+  "crop_id": "a24e084c",
+  "image_id": "af485b3a-aa48-4564-b217-d8c0dc9189e6",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1776853824/hur9tl465kegtbehjcnc.jpg",
+  "pred_class": "Karenia",
+  "yolo_class": "Alexandrium",
+  "yolo_conf": 0.7438,
+  "confidence": 0.7564,
+  "probabilities": {
+    "Karenia": 0.7564,
+    "Alexandrium": 0.2436,
+    "Autres": 0.0
+  },
+  "has_mask": false,
+  "mask_path": null,
+  "bbox_xyxy": [
+    76.6,
+    111.3,
+    134.3,
+    161.4
+  ],
+  "created_at": "2026-06-07T12:37:59.251955",
+  "validated": false,
+  "crop_path": "static/results/karenia_a24e084c_af485b3a-aa48-4564-b217-d8c0dc9189e6.jpg",
+  "dataset_path": "/app/dataset/Karenia/karenia_a24e084c_af485b3a-aa48-4564-b217-d8c0dc9189e6.jpg",
+  "fname": "karenia_a24e084c_af485b3a-aa48-4564-b217-d8c0dc9189e6.jpg"
+}

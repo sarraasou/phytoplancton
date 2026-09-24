@@ -1,0 +1,21 @@
+{
+  "crop_id": "10aab2db",
+  "image_id": "flr10pmt55758075_karenia_1 2019-07-10 19h36_Cropped_With_Scalebar_15332",
+  "image_url": "local_upload",
+  "pred_class": "Autres",
+  "confidence": 1.0,
+  "probabilities": {
+    "Alexandrium": 0.0,
+    "Autres": 1.0,
+    "Karenia": 0.0
+  },
+  "crop_path": "static/results/autres_10aab2db_flr10pmt55758075_karenia_1_2019-07-10_19h36_Cropped_With_Sca.jpg",
+  "pending_fname": "autres_10aab2db_flr10pmt55758075_karenia_1_2019-07-10_19h36_Cropped_With_Sca.jpg",
+  "bbox": [
+    141,
+    71,
+    181,
+    117
+  ],
+  "validated": false
+}

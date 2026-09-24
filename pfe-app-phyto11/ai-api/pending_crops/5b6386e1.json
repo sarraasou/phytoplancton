@@ -1,0 +1,25 @@
+{
+  "crop_id": "5b6386e1",
+  "image_id": "flr10pmt55758075_alex 2019-07-10 08h39_Cropped_With_Scalebar_3628",
+  "image_url": "local_upload",
+  "pred_class": "Autres",
+  "confidence": 1.0,
+  "probabilities": {
+    "Alexandrium": 0.0,
+    "Autres": 1.0,
+    "Karenia": 0.0
+  },
+  "crop_path": "static/results/autres_5b6386e1_flr10pmt55758075_alex_2019-07-10_08h39_Cropped_With_Scalebar.jpg",
+  "pending_fname": "autres_5b6386e1_flr10pmt55758075_alex_2019-07-10_08h39_Cropped_With_Scalebar.jpg",
+  "bbox": [
+    91,
+    86,
+    146,
+    148
+  ],
+  "validated": true,
+  "confirmed_class": "Karenia",
+  "was_correct": false,
+  "saved_path": "dataset/Karenia/karenia_5b6386e1_flr10pmt55758075_alex_2019-07-10_08h39_Cropped_With_Scalebar.jpg",
+  "saved_filename": "karenia_5b6386e1_flr10pmt55758075_alex_2019-07-10_08h39_Cropped_With_Scalebar.jpg"
+}

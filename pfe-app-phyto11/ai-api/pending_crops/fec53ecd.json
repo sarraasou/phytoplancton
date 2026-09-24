@@ -1,0 +1,17 @@
+{
+  "crop_id": "fec53ecd",
+  "image_id": "6039134d-4d81-46e1-b3b3-6eab12bdf070",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1776851424/baijisjk4xfbgmlg7wad.jpg",
+  "pred_class": "Autres",
+  "confidence": 0.835,
+  "probabilities": {
+    "Autres": 0.835,
+    "Alexandrium": 0.099,
+    "Karenia": 0.066
+  },
+  "created_at": "2026-04-22T15:34:15.296638",
+  "validated": false,
+  "crop_path": "static/results/autres_fec53ecd_6039134d-4d81-46e1-b3b3-6eab12bdf070.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Autres\\autres_fec53ecd_6039134d-4d81-46e1-b3b3-6eab12bdf070.jpg",
+  "fname": "autres_fec53ecd_6039134d-4d81-46e1-b3b3-6eab12bdf070.jpg"
+}

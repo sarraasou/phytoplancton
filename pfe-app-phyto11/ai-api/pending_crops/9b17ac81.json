@@ -1,0 +1,17 @@
+{
+  "crop_id": "9b17ac81",
+  "image_id": "c87729ac-3709-4f57-9543-a13b5a840984",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1775817001/d5iqmljrj0ofrbnzmlug.jpg",
+  "pred_class": "Alexandrium",
+  "confidence": 0.831,
+  "probabilities": {
+    "Alexandrium": 0.831,
+    "Autres": 0.1014,
+    "Karenia": 0.0676
+  },
+  "created_at": "2026-04-22T17:01:33.845705",
+  "validated": false,
+  "crop_path": "static/results/alexandrium_9b17ac81_c87729ac-3709-4f57-9543-a13b5a840984.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Alexandrium\\alexandrium_9b17ac81_c87729ac-3709-4f57-9543-a13b5a840984.jpg",
+  "fname": "alexandrium_9b17ac81_c87729ac-3709-4f57-9543-a13b5a840984.jpg"
+}

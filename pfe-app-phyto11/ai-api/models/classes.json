@@ -1,0 +1,13 @@
+{
+  "classes": [
+    "Alexandrium",
+    "Autres",
+    "Karenia"
+  ],
+  "order": "alphabetical_imagefolder",
+  "indices": {
+    "Alexandrium": 0,
+    "Autres": 1,
+    "Karenia": 2
+  }
+}

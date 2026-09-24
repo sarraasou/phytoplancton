@@ -1,0 +1,27 @@
+{
+  "crop_id": "a29ddbee",
+  "image_id": "test",
+  "image_url": "http://localhost:8002/static/results/test_source.jpg",
+  "pred_class": "Karenia",
+  "yolo_class": "Alexandrium",
+  "yolo_conf": 0.4592,
+  "confidence": 0.6136,
+  "probabilities": {
+    "Karenia": 0.6136,
+    "Alexandrium": 0.082,
+    "Autres": 0.3044
+  },
+  "has_mask": true,
+  "mask_path": "static/masks/a29ddbee_mask.png",
+  "bbox_xyxy": [
+    228.3,
+    63.3,
+    268.2,
+    98.5
+  ],
+  "created_at": "2026-06-07T00:30:40.800123",
+  "validated": false,
+  "crop_path": "static/results/karenia_a29ddbee_test.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Karenia\\karenia_a29ddbee_test.jpg",
+  "fname": "karenia_a29ddbee_test.jpg"
+}

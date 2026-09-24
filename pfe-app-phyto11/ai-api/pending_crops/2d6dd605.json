@@ -1,0 +1,27 @@
+{
+  "crop_id": "2d6dd605",
+  "image_id": "test",
+  "image_url": "http://localhost:8002/static/results/flr11pmt55758050_portsfax-2019-10-02-14h06_Cropped_With_Scalebar_1016_jpg.rf.d85687fd5c574b658c2889091894a692.jpg",
+  "pred_class": "Alexandrium",
+  "yolo_class": "Karenia",
+  "yolo_conf": 0.3145,
+  "confidence": 0.7376,
+  "probabilities": {
+    "Karenia": 0.0201,
+    "Alexandrium": 0.7376,
+    "Autres": 0.2424
+  },
+  "has_mask": true,
+  "mask_path": "static/masks/2d6dd605_mask.png",
+  "bbox_xyxy": [
+    70.5,
+    70.9,
+    193.5,
+    179.9
+  ],
+  "created_at": "2026-06-07T00:47:15.986022",
+  "validated": false,
+  "crop_path": "static/results/alexandrium_2d6dd605_test.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Alexandrium\\alexandrium_2d6dd605_test.jpg",
+  "fname": "alexandrium_2d6dd605_test.jpg"
+}

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="950" viewBox="0 0 1500 950">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font-family:Arial,sans-serif;font-size:34px;font-weight:700;fill:#1f4e79}
+      .sub{font-family:Arial,sans-serif;font-size:17px;fill:#475569}.net{fill:#eef6ff;stroke:#1f4e79;stroke-width:3;rx:24}
+      .dev{fill:#fff;stroke:#2e75b6;stroke-width:3;rx:14}.infra{fill:#fff7e8;stroke:#c77700;stroke-width:3;rx:14}
+      .ai{fill:#eef8f3;stroke:#1e7a52;stroke-width:3;rx:14}.label{font-family:Arial,sans-serif;font-size:21px;font-weight:700;fill:#0f172a}
+      .txt{font-family:Arial,sans-serif;font-size:15px;fill:#334155}.small{font-family:Arial,sans-serif;font-size:13px;fill:#475569}
+      .arrow{stroke:#334155;stroke-width:2.8;fill:none;marker-end:url(#a)}.dash{stroke:#64748b;stroke-width:2.3;stroke-dasharray:7 7;fill:none;marker-end:url(#g)}
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#334155"/></marker>
+    <marker id="g" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#64748b"/></marker>
+  </defs>
+  <rect class="bg" width="1500" height="950"/>
+  <text class="title" x="750" y="62" text-anchor="middle">Déploiement Docker Compose</text>
+  <text class="sub" x="750" y="95" text-anchor="middle">Orchestration des conteneurs de développement et d'infrastructure</text>
+
+  <rect class="net" x="55" y="130" width="1390" height="760"/>
+  <text class="label" x="750" y="170" text-anchor="middle">Réseau applicatif Docker Compose</text>
+
+  <rect class="dev" x="100" y="230" width="210" height="105"/>
+  <text class="label" x="205" y="268" text-anchor="middle">client-ui</text>
+  <text class="txt" x="205" y="298" text-anchor="middle">Vue.js / Vite</text>
+  <text class="small" x="205" y="322" text-anchor="middle">3001:3001</text>
+
+  <rect class="dev" x="390" y="230" width="210" height="105"/>
+  <text class="label" x="495" y="268" text-anchor="middle">server</text>
+  <text class="txt" x="495" y="298" text-anchor="middle">NestJS</text>
+  <text class="small" x="495" y="322" text-anchor="middle">3005:3005</text>
+
+  <rect class="ai" x="680" y="230" width="210" height="105"/>
+  <text class="label" x="785" y="268" text-anchor="middle">ai-api</text>
+  <text class="txt" x="785" y="298" text-anchor="middle">FastAPI</text>
+  <text class="small" x="785" y="322" text-anchor="middle">8001:8001</text>
+
+  <rect class="infra" x="970" y="230" width="210" height="105"/>
+  <text class="label" x="1075" y="268" text-anchor="middle">kong</text>
+  <text class="txt" x="1075" y="298" text-anchor="middle">API Gateway</text>
+  <text class="small" x="1075" y="322" text-anchor="middle">8015:8000</text>
+
+  <rect class="infra" x="100" y="455" width="210" height="105"/>
+  <text class="label" x="205" y="493" text-anchor="middle">db</text>
+  <text class="txt" x="205" y="523" text-anchor="middle">PostgreSQL</text>
+  <text class="small" x="205" y="547" text-anchor="middle">5433:5432</text>
+
+  <rect class="infra" x="390" y="455" width="210" height="105"/>
+  <text class="label" x="495" y="493" text-anchor="middle">auth</text>
+  <text class="txt" x="495" y="523" text-anchor="middle">Supabase GoTrue</text>
+  <text class="small" x="495" y="547" text-anchor="middle">9999 interne</text>
+
+  <rect class="infra" x="680" y="455" width="210" height="105"/>
+  <text class="label" x="785" y="493" text-anchor="middle">rest</text>
+  <text class="txt" x="785" y="523" text-anchor="middle">PostgREST</text>
+  <text class="small" x="785" y="547" text-anchor="middle">3000 interne</text>
+
+  <rect class="infra" x="970" y="455" width="210" height="105"/>
+  <text class="label" x="1075" y="493" text-anchor="middle">meta</text>
+  <text class="txt" x="1075" y="523" text-anchor="middle">postgres-meta</text>
+  <text class="small" x="1075" y="547" text-anchor="middle">8080 interne</text>
+
+  <rect class="infra" x="1230" y="455" width="170" height="105"/>
+  <text class="label" x="1315" y="493" text-anchor="middle">studio</text>
+  <text class="txt" x="1315" y="523" text-anchor="middle">Supabase UI</text>
+  <text class="small" x="1315" y="547" text-anchor="middle">3000:3000</text>
+
+  <rect class="dev" x="260" y="680" width="220" height="105"/>
+  <text class="label" x="370" y="718" text-anchor="middle">migrate-dev</text>
+  <text class="txt" x="370" y="748" text-anchor="middle">Prisma migrations</text>
+  <text class="small" x="370" y="772" text-anchor="middle">seed + generate</text>
+
+  <rect class="dev" x="555" y="680" width="220" height="105"/>
+  <text class="label" x="665" y="718" text-anchor="middle">pgAdmin</text>
+  <text class="txt" x="665" y="748" text-anchor="middle">Admin BDD</text>
+  <text class="small" x="665" y="772" text-anchor="middle">53603:53603</text>
+
+  <rect class="dev" x="850" y="680" width="220" height="105"/>
+  <text class="label" x="960" y="718" text-anchor="middle">Dozzle</text>
+  <text class="txt" x="960" y="748" text-anchor="middle">Logs Docker</text>
+  <text class="small" x="960" y="772" text-anchor="middle">8444:8080</text>
+
+  <path class="arrow" d="M310 282 H385"/>
+  <path class="arrow" d="M600 282 H675"/>
+  <path class="arrow" d="M970 282 H895"/>
+  <path class="arrow" d="M1075 335 V450"/>
+  <path class="arrow" d="M495 335 V450"/>
+  <path class="arrow" d="M495 335 C390 390 260 420 205 450"/>
+  <path class="arrow" d="M785 335 V450"/>
+  <path class="arrow" d="M785 335 C655 390 560 420 495 450"/>
+  <path class="dash" d="M370 680 C310 625 245 590 205 560"/>
+  <path class="dash" d="M665 680 C560 620 355 585 205 560"/>
+  <path class="dash" d="M960 680 C980 625 1015 590 1075 560"/>
+
+  <text class="small" x="750" y="850" text-anchor="middle">Profil dev : client-ui, server, ai-api, pgAdmin, Dozzle, migrate-dev et infrastructure. Profil prod : services essentiels.</text>
+</svg>

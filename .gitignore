@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+*.rar
+pfe-app-phyto11/ai-api/models/sam3.pt
+pfe-app-phyto11/ai-api/models/sam2.1_hiera_base_plus.pt
+pfe-app-phyto11/ai-api/models/sam2_hiera_base+.pt

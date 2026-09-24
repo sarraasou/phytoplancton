@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font-family:Arial,sans-serif;font-size:34px;font-weight:700;fill:#1f4e79}
+      .sub{font-family:Arial,sans-serif;font-size:17px;fill:#475569}.box{fill:#fff;stroke:#1e7a52;stroke-width:3;rx:16}
+      .core{fill:#eef8f3;stroke:#1e7a52;stroke-width:4;rx:18}.store{fill:#fff7e8;stroke:#c77700;stroke-width:3;rx:16}
+      .label{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}.txt{font-family:Arial,sans-serif;font-size:16px;fill:#334155}
+      .small{font-family:Arial,sans-serif;font-size:14px;fill:#475569}.arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#334155"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <text class="title" x="700" y="62" text-anchor="middle">Architecture du service IA</text>
+  <text class="sub" x="700" y="95" text-anchor="middle">Microservice FastAPI indépendant pour la classification des images de phytoplancton</text>
+
+  <rect class="core" x="515" y="135" width="370" height="120"/>
+  <text class="label" x="700" y="180" text-anchor="middle">FastAPI / Uvicorn</text>
+  <text class="txt" x="700" y="212" text-anchor="middle">API REST d'inférence - port 8001</text>
+  <text class="small" x="700" y="238" text-anchor="middle">Documentation Swagger disponible sur /docs</text>
+
+  <rect class="box" x="70" y="360" width="220" height="120"/>
+  <text class="label" x="180" y="400" text-anchor="middle">Réception</text>
+  <text class="txt" x="180" y="432" text-anchor="middle">Image envoyée</text>
+  <text class="small" x="180" y="458" text-anchor="middle">depuis NestJS</text>
+
+  <rect class="box" x="340" y="360" width="220" height="120"/>
+  <text class="label" x="450" y="400" text-anchor="middle">Prétraitement</text>
+  <text class="txt" x="450" y="432" text-anchor="middle">OpenCV</text>
+  <text class="small" x="450" y="458" text-anchor="middle">normalisation image</text>
+
+  <rect class="box" x="610" y="360" width="220" height="120"/>
+  <text class="label" x="720" y="400" text-anchor="middle">Modèle IA</text>
+  <text class="txt" x="720" y="432" text-anchor="middle">Classification</text>
+  <text class="small" x="720" y="458" text-anchor="middle">Karenia / Autres</text>
+
+  <rect class="box" x="880" y="360" width="220" height="120"/>
+  <text class="label" x="990" y="400" text-anchor="middle">Résultat</text>
+  <text class="txt" x="990" y="432" text-anchor="middle">Label + score</text>
+  <text class="small" x="990" y="458" text-anchor="middle">réponse JSON</text>
+
+  <rect class="box" x="1150" y="360" width="220" height="120"/>
+  <text class="label" x="1260" y="400" text-anchor="middle">Retour</text>
+  <text class="txt" x="1260" y="432" text-anchor="middle">Serveur NestJS</text>
+  <text class="small" x="1260" y="458" text-anchor="middle">création annotation</text>
+
+  <rect class="store" x="300" y="610" width="300" height="105"/>
+  <text class="label" x="450" y="650" text-anchor="middle">Répertoire models/</text>
+  <text class="txt" x="450" y="680" text-anchor="middle">Modèles entraînés</text>
+
+  <rect class="store" x="800" y="610" width="300" height="105"/>
+  <text class="label" x="950" y="650" text-anchor="middle">Répertoire images/</text>
+  <text class="txt" x="950" y="680" text-anchor="middle">Images traitées</text>
+
+  <path class="arrow" d="M700 255 V355"/>
+  <path class="arrow" d="M290 420 H335"/>
+  <path class="arrow" d="M560 420 H605"/>
+  <path class="arrow" d="M830 420 H875"/>
+  <path class="arrow" d="M1100 420 H1145"/>
+  <path class="arrow" d="M450 610 C500 540 630 500 700 480"/>
+  <path class="arrow" d="M950 480 V605"/>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font-family:Arial,sans-serif;font-size:34px;font-weight:700;fill:#1f4e79}
+      .sub{font-family:Arial,sans-serif;font-size:17px;fill:#475569}.kong{fill:#edf4ff;stroke:#1f4e79;stroke-width:4;rx:18}
+      .box{fill:#fff;stroke:#2e75b6;stroke-width:3;rx:16}.secure{fill:#eef8f3;stroke:#1e7a52;stroke-width:3;rx:16}
+      .admin{fill:#fff7e8;stroke:#c77700;stroke-width:3;rx:16}.label{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+      .txt{font-family:Arial,sans-serif;font-size:16px;fill:#334155}.small{font-family:Arial,sans-serif;font-size:14px;fill:#475569}
+      .arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#a)}.dash{stroke:#64748b;stroke-width:2.5;stroke-dasharray:8 8;fill:none;marker-end:url(#g)}
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#334155"/></marker>
+    <marker id="g" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#64748b"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="900"/>
+  <text class="title" x="700" y="62" text-anchor="middle">Architecture de routage Kong</text>
+  <text class="sub" x="700" y="95" text-anchor="middle">Point d'entrée unique pour l'authentification, les APIs Supabase et le back-end NestJS</text>
+
+  <rect class="box" x="80" y="370" width="240" height="135"/>
+  <text class="label" x="200" y="415" text-anchor="middle">Client Vue.js</text>
+  <text class="txt" x="200" y="447" text-anchor="middle">http://localhost:3001</text>
+  <text class="small" x="200" y="475" text-anchor="middle">requêtes HTTP</text>
+
+  <rect class="kong" x="520" y="315" width="360" height="240"/>
+  <text class="label" x="700" y="365" text-anchor="middle">Kong Gateway</text>
+  <text class="txt" x="700" y="397" text-anchor="middle">http://localhost:8015</text>
+  <text class="small" x="700" y="430" text-anchor="middle">CORS</text>
+  <text class="small" x="700" y="456" text-anchor="middle">Key Auth</text>
+  <text class="small" x="700" y="482" text-anchor="middle">ACL : anon / admin</text>
+  <text class="small" x="700" y="508" text-anchor="middle">Configuration déclarative kong.yml</text>
+
+  <rect class="secure" x="1040" y="110" width="280" height="100"/>
+  <text class="label" x="1180" y="150" text-anchor="middle">GoTrue</text>
+  <text class="txt" x="1180" y="180" text-anchor="middle">/auth/v1/</text>
+
+  <rect class="secure" x="1040" y="250" width="280" height="100"/>
+  <text class="label" x="1180" y="290" text-anchor="middle">PostgREST</text>
+  <text class="txt" x="1180" y="320" text-anchor="middle">/rest/v1/</text>
+
+  <rect class="secure" x="1040" y="390" width="280" height="100"/>
+  <text class="label" x="1180" y="430" text-anchor="middle">NestJS</text>
+  <text class="txt" x="1180" y="460" text-anchor="middle">/nest/</text>
+
+  <rect class="admin" x="1040" y="530" width="280" height="100"/>
+  <text class="label" x="1180" y="570" text-anchor="middle">Postgres Meta</text>
+  <text class="txt" x="1180" y="600" text-anchor="middle">/pg/</text>
+
+  <rect class="admin" x="1040" y="670" width="280" height="100"/>
+  <text class="label" x="1180" y="710" text-anchor="middle">Supabase Studio</text>
+  <text class="txt" x="1180" y="740" text-anchor="middle">/</text>
+
+  <rect class="admin" x="525" y="650" width="350" height="120"/>
+  <text class="label" x="700" y="692" text-anchor="middle">Consumers Kong</text>
+  <text class="txt" x="700" y="724" text-anchor="middle">anon : accès public limité</text>
+  <text class="txt" x="700" y="750" text-anchor="middle">service_role : accès administrateur</text>
+
+  <path class="arrow" d="M320 438 H515"/>
+  <path class="arrow" d="M880 360 C940 270 990 170 1035 160"/>
+  <path class="arrow" d="M880 400 C940 355 990 315 1035 300"/>
+  <path class="arrow" d="M880 438 H1035"/>
+  <path class="arrow" d="M880 480 C950 520 990 565 1035 580"/>
+  <path class="arrow" d="M880 520 C950 610 990 705 1035 720"/>
+  <path class="dash" d="M700 650 V560"/>
+</svg>

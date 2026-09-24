@@ -1,0 +1,1 @@
+﻿SELECT result, COUNT(*) as total FROM public."Annotation" WHERE "deletedAt" IS NULL AND result IS NOT NULL GROUP BY result ORDER BY total DESC;

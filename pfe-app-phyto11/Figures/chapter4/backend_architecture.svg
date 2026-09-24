@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font-family:Arial,sans-serif;font-size:34px;font-weight:700;fill:#1f4e79}
+      .sub{font-family:Arial,sans-serif;font-size:17px;fill:#475569}.box{fill:#fff;stroke:#2e75b6;stroke-width:3;rx:16}
+      .core{fill:#edf4ff;stroke:#1f4e79;stroke-width:4;rx:18}.db{fill:#fff7e8;stroke:#c77700;stroke-width:3;rx:16}
+      .sec{fill:#eef8f3;stroke:#1e7a52;stroke-width:3;rx:16}.label{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+      .txt{font-family:Arial,sans-serif;font-size:16px;fill:#334155}.small{font-family:Arial,sans-serif;font-size:14px;fill:#475569}
+      .arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#a)}.dash{stroke:#64748b;stroke-width:2.5;stroke-dasharray:8 8;fill:none;marker-end:url(#g)}
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#334155"/></marker>
+    <marker id="g" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#64748b"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="900"/>
+  <text class="title" x="700" y="62" text-anchor="middle">Architecture du back-end NestJS</text>
+  <text class="sub" x="700" y="95" text-anchor="middle">API métier modulaire, générée puis enrichie par une logique spécifique au projet</text>
+
+  <rect class="core" x="500" y="145" width="400" height="135"/>
+  <text class="label" x="700" y="190" text-anchor="middle">Application NestJS</text>
+  <text class="txt" x="700" y="222" text-anchor="middle">Préfixe global : /nest/api</text>
+  <text class="small" x="700" y="250" text-anchor="middle">ValidationPipe, CORS, Swagger, cache, Sentry, Winston</text>
+
+  <rect class="box" x="70" y="350" width="230" height="120"/>
+  <text class="label" x="185" y="390" text-anchor="middle">AuthModule</text>
+  <text class="txt" x="185" y="420" text-anchor="middle">Inscription, login</text>
+  <text class="small" x="185" y="446" text-anchor="middle">activation, rejet, invitation</text>
+
+  <rect class="box" x="330" y="350" width="230" height="120"/>
+  <text class="label" x="445" y="390" text-anchor="middle">UserModule</text>
+  <text class="txt" x="445" y="420" text-anchor="middle">Utilisateurs</text>
+  <text class="small" x="445" y="446" text-anchor="middle">rôles et statuts</text>
+
+  <rect class="box" x="590" y="350" width="230" height="120"/>
+  <text class="label" x="705" y="390" text-anchor="middle">ProjectModule</text>
+  <text class="txt" x="705" y="420" text-anchor="middle">Projets</text>
+  <text class="small" x="705" y="446" text-anchor="middle">statistiques Karenia</text>
+
+  <rect class="box" x="850" y="350" width="230" height="120"/>
+  <text class="label" x="965" y="390" text-anchor="middle">ImageModule</text>
+  <text class="txt" x="965" y="420" text-anchor="middle">Images</text>
+  <text class="small" x="965" y="446" text-anchor="middle">upload et stockage</text>
+
+  <rect class="box" x="1110" y="350" width="230" height="120"/>
+  <text class="label" x="1225" y="390" text-anchor="middle">AnnotationModule</text>
+  <text class="txt" x="1225" y="420" text-anchor="middle">Résultats IA</text>
+  <text class="small" x="1225" y="446" text-anchor="middle">validation utilisateur</text>
+
+  <rect class="sec" x="145" y="560" width="270" height="110"/>
+  <text class="label" x="280" y="600" text-anchor="middle">ProjectPermission</text>
+  <text class="txt" x="280" y="630" text-anchor="middle">Droits par projet</text>
+  <text class="small" x="280" y="654" text-anchor="middle">view, upload, validate, edit</text>
+
+  <rect class="sec" x="455" y="560" width="230" height="110"/>
+  <text class="label" x="570" y="600" text-anchor="middle">Notification</text>
+  <text class="txt" x="570" y="630" text-anchor="middle">Messages internes</text>
+  <text class="small" x="570" y="654" text-anchor="middle">activation, classification</text>
+
+  <rect class="sec" x="725" y="560" width="230" height="110"/>
+  <text class="label" x="840" y="600" text-anchor="middle">AiModel</text>
+  <text class="txt" x="840" y="630" text-anchor="middle">Références modèles</text>
+  <text class="small" x="840" y="654" text-anchor="middle">liées aux annotations</text>
+
+  <rect class="sec" x="995" y="560" width="260" height="110"/>
+  <text class="label" x="1125" y="600" text-anchor="middle">Collaborator</text>
+  <text class="txt" x="1125" y="630" text-anchor="middle">Partage des projets</text>
+  <text class="small" x="1125" y="654" text-anchor="middle">membres et accès</text>
+
+  <rect class="db" x="210" y="750" width="310" height="95"/>
+  <text class="label" x="365" y="790" text-anchor="middle">Prisma ORM</text>
+  <text class="txt" x="365" y="820" text-anchor="middle">Accès typé aux données</text>
+
+  <rect class="db" x="590" y="750" width="310" height="95"/>
+  <text class="label" x="745" y="790" text-anchor="middle">PostgreSQL</text>
+  <text class="txt" x="745" y="820" text-anchor="middle">Base relationnelle</text>
+
+  <rect class="db" x="970" y="750" width="310" height="95"/>
+  <text class="label" x="1125" y="790" text-anchor="middle">GoTrue / Brevo</text>
+  <text class="txt" x="1125" y="820" text-anchor="middle">Auth et e-mails</text>
+
+  <path class="arrow" d="M700 280 V345"/>
+  <path class="arrow" d="M700 280 C470 300 200 320 185 345"/>
+  <path class="arrow" d="M700 280 C560 310 460 320 445 345"/>
+  <path class="arrow" d="M700 280 C850 310 950 320 965 345"/>
+  <path class="arrow" d="M700 280 C980 300 1210 320 1225 345"/>
+  <path class="arrow" d="M705 470 V555"/>
+  <path class="arrow" d="M185 470 C190 525 245 540 280 555"/>
+  <path class="arrow" d="M1225 470 C1215 520 1160 540 1125 555"/>
+  <path class="dash" d="M365 750 C425 705 620 690 705 670"/>
+  <path class="arrow" d="M520 798 H585"/>
+  <path class="dash" d="M1125 750 V675"/>
+</svg>

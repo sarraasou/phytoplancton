@@ -1,0 +1,1094 @@
+[
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AppConfig",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AppConfig",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AppConfig",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AppConfig",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AppConfig",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AppConfig",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AppConfig",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AppConfig",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AppConfig",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AppConfig",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AppConfig",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AppConfig",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AppConfig",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AppConfig",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AppConfig",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AppConfig",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AppConfig",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AppConfig",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AppConfig",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AppConfig",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AppConfig",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AppConfig",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AppConfig",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AppConfig",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AppConfig",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "AppConfig",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Project",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Project",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Project",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Project",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Project",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Project",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Project",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Project",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Project",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Project",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Project",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Project",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Project",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Project",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Project",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Project",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Image",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Image",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Image",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "Image",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AiModel",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AiModel",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AiModel",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AiModel",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "AiModel",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AiModel",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AiModel",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AiModel",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AiModel",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "AiModel",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AiModel",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AiModel",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AiModel",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AiModel",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "AiModel",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AiModel",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AiModel",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AiModel",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AiModel",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "AiModel",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AiModel",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AiModel",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AiModel",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AiModel",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "AiModel",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "AiModel",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Annotation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Annotation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Annotation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Annotation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Annotation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Annotation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Annotation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Annotation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Annotation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Annotation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Annotation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Annotation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Annotation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Annotation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Annotation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Annotation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Annotation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Annotation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Annotation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Annotation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Annotation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Annotation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Annotation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Annotation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Annotation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "Annotation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Collaborator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Collaborator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Collaborator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Collaborator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Collaborator",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Collaborator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Collaborator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Collaborator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Collaborator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Collaborator",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Collaborator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Collaborator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Collaborator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Collaborator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "advanced_user_role",
+    "resource": "Collaborator",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Collaborator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Collaborator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Collaborator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Collaborator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "expert",
+    "resource": "Collaborator",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Collaborator",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Collaborator",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Collaborator",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Collaborator",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "technicien",
+    "resource": "Collaborator",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "basic_user_role",
+    "resource": "Collaborator",
+    "action": "read:own",
+    "attributes": "*"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "crop_id": "3f7588ce",
+  "image_id": "test",
+  "image_url": "http://localhost:8002/static/results/flr11pmt55758050_portsfax 2019-09-30 20h06_Cropped_With_Scalebar_28.jpg",
+  "pred_class": "Karenia",
+  "yolo_class": "Alexandrium",
+  "yolo_conf": 0.8066,
+  "confidence": 0.906,
+  "probabilities": {
+    "Karenia": 0.906,
+    "Alexandrium": 0.094,
+    "Autres": 0.0
+  },
+  "has_mask": true,
+  "mask_path": "static/masks/3f7588ce_mask.png",
+  "bbox_xyxy": [
+    45.4,
+    46.9,
+    115.9,
+    110.9
+  ],
+  "created_at": "2026-06-07T01:30:53.437605",
+  "validated": false,
+  "crop_path": "static/results/karenia_3f7588ce_test.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Karenia\\karenia_3f7588ce_test.jpg",
+  "fname": "karenia_3f7588ce_test.jpg"
+}

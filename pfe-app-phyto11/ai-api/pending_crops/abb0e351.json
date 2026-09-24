@@ -1,0 +1,27 @@
+{
+  "crop_id": "abb0e351",
+  "image_id": "e1175172-1cca-44e6-b6ba-27efa893c5dd",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1780862376/p8nwr181hssvizuqbu9h.jpg",
+  "pred_class": "Karenia",
+  "yolo_class": "Alexandrium",
+  "yolo_conf": 0.7066,
+  "confidence": 0.6258,
+  "probabilities": {
+    "Karenia": 0.6258,
+    "Alexandrium": 0.3742,
+    "Autres": 0.0
+  },
+  "has_mask": true,
+  "mask_path": "static/masks/abb0e351_mask.png",
+  "bbox_xyxy": [
+    62.5,
+    103.5,
+    117.9,
+    165.9
+  ],
+  "created_at": "2026-06-07T22:59:19.939462",
+  "validated": false,
+  "crop_path": "static/results/karenia_abb0e351_e1175172-1cca-44e6-b6ba-27efa893c5dd.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Karenia\\karenia_abb0e351_e1175172-1cca-44e6-b6ba-27efa893c5dd.jpg",
+  "fname": "karenia_abb0e351_e1175172-1cca-44e6-b6ba-27efa893c5dd.jpg"
+}

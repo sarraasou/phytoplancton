@@ -1,0 +1,35 @@
+{
+  "dataServiceGeneratorVersion": "0.11.2",
+  "appInfo": {
+    "name": "My app-2",
+    "description": "",
+    "menuDisplay": "horizontal",
+    "version": "v08nzqqb",
+    "id": "cmbf4dk5n83078201o0yvrrm3vc",
+    "url": "http://localhost:3005/cmbf4dk5n83078201o0yvrrm3vc",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "postgres",
+      "dbPort": 5432,
+      "dbUser": "postgres",
+      "appId": "cmbf4dk5n83078201o0yvrrm3vc",
+      "authProvider": "Jwt"
+    },
+    "appColors": {
+      "primary": [
+        { "label": "primary-50", "value": "#03045e" },
+        { "label": "primary-100", "value": "#023e8a" },
+        { "label": "primary-500", "value": "#0077b6" },
+        { "label": "primary-800", "value": "#0096c7" }
+      ],
+      "secondary": [
+        { "label": "secondary-50", "value": "#00b4d8" },
+        { "label": "secondary-100", "value": "#48cae4" },
+        { "label": "secondary-500", "value": "#90e0ef" },
+        { "label": "secondary-800", "value": "#caf0f8" }
+      ]
+    },
+    "authTemplate": "template-1"
+  }
+}

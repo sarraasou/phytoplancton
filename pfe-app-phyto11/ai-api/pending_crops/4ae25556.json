@@ -1,0 +1,17 @@
+{
+  "crop_id": "4ae25556",
+  "image_id": "3f831145-e0a4-4c75-9f66-c270f0413085",
+  "image_url": "https://res.cloudinary.com/dsiekn5sr/image/upload/v1776123600/yuabwaltougxsodt2gwd.jpg",
+  "pred_class": "Autres",
+  "confidence": 0.912,
+  "probabilities": {
+    "Autres": 0.912,
+    "Alexandrium": 0.0528,
+    "Karenia": 0.0352
+  },
+  "created_at": "2026-04-22T11:03:40.786888",
+  "validated": false,
+  "crop_path": "static/results/4ae25556.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Autres\\4ae25556.jpg",
+  "fname": "4ae25556.jpg"
+}

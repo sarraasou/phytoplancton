@@ -1,0 +1,27 @@
+{
+  "crop_id": "5d09c64f",
+  "image_id": "test",
+  "image_url": "http://localhost:8002/static/results/test_source.jpg",
+  "pred_class": "Alexandrium",
+  "yolo_class": "Alexandrium",
+  "yolo_conf": 0.0793,
+  "confidence": 1.0,
+  "probabilities": {
+    "Karenia": 0.0,
+    "Alexandrium": 1.0,
+    "Autres": 0.0
+  },
+  "has_mask": true,
+  "mask_path": "static/masks/5d09c64f_mask.png",
+  "bbox_xyxy": [
+    89.4,
+    59.6,
+    274.9,
+    109.7
+  ],
+  "created_at": "2026-06-06T21:32:25.928968",
+  "validated": false,
+  "crop_path": "static/results/alexandrium_5d09c64f_test.jpg",
+  "dataset_path": "C:\\Users\\MSI\\Desktop\\final\\pfe-2025\\pfe-app-phyto11\\ai-api\\dataset\\Alexandrium\\alexandrium_5d09c64f_test.jpg",
+  "fname": "alexandrium_5d09c64f_test.jpg"
+}

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+  <defs>
+    <style>
+      .bg { fill: #f7fafc; }
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 700; fill: #1f4e79; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 18px; fill: #475569; }
+      .box { fill: #ffffff; stroke: #2e75b6; stroke-width: 3; rx: 18; }
+      .box-ai { fill: #eef8f3; stroke: #1e7a52; stroke-width: 3; rx: 18; }
+      .box-db { fill: #fff7e8; stroke: #c77700; stroke-width: 3; rx: 18; }
+      .box-gateway { fill: #edf4ff; stroke: #1f4e79; stroke-width: 4; rx: 18; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+      .text { font-family: Arial, Helvetica, sans-serif; font-size: 17px; fill: #334155; }
+      .small { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #475569; }
+      .port { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #64748b; font-style: italic; }
+      .arrow { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .arrow2 { stroke: #1f4e79; stroke-width: 3.2; fill: none; marker-end: url(#arrowheadBlue); }
+      .dash { stroke: #64748b; stroke-width: 2.5; stroke-dasharray: 8 8; fill: none; marker-end: url(#arrowheadGray); }
+      .icon { fill: #2e75b6; }
+      .icon-ai { fill: #1e7a52; }
+      .icon-db { fill: #c77700; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#334155"/>
+    </marker>
+    <marker id="arrowheadBlue" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#1f4e79"/>
+    </marker>
+    <marker id="arrowheadGray" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="850"/>
+
+  <text class="title" x="700" y="70" text-anchor="middle">Architecture générale de la plateforme AlgaeVision</text>
+  <text class="subtitle" x="700" y="104" text-anchor="middle">Modèle client-serveur étendu avec service d'intelligence artificielle indépendant</text>
+
+  <!-- Client -->
+  <rect class="box" x="70" y="250" width="300" height="210"/>
+  <circle class="icon" cx="130" cy="310" r="28"/>
+  <rect x="116" y="298" width="28" height="20" rx="3" fill="#ffffff"/>
+  <rect x="122" y="322" width="16" height="5" rx="2" fill="#ffffff"/>
+  <text class="label" x="190" y="305">Interface client</text>
+  <text class="text" x="190" y="336">Vue.js 3 / Vite</text>
+  <text class="port" x="190" y="363">SPA - port 3001</text>
+  <text class="small" x="105" y="405">Gestion des projets</text>
+  <text class="small" x="105" y="430">Importation des images</text>
+  <text class="small" x="105" y="455">Consultation et validation</text>
+
+  <!-- Kong -->
+  <rect class="box-gateway" x="540" y="250" width="320" height="210"/>
+  <circle class="icon" cx="600" cy="310" r="28"/>
+  <path d="M590 310 h20 M600 300 v20" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text class="label" x="660" y="305">Passerelle API</text>
+  <text class="text" x="660" y="336">Kong 2.1</text>
+  <text class="port" x="660" y="363">Point d'entrée - port 8015</text>
+  <text class="small" x="575" y="405">Routage des requêtes</text>
+  <text class="small" x="575" y="430">CORS, Key Auth, ACL</text>
+  <text class="small" x="575" y="455">Accès aux services internes</text>
+
+  <!-- Server -->
+  <rect class="box" x="1030" y="160" width="300" height="210"/>
+  <circle class="icon" cx="1090" cy="220" r="28"/>
+  <path d="M1078 214 h24 v14 h-24 z M1082 206 h16" stroke="#ffffff" stroke-width="5" fill="none" stroke-linejoin="round"/>
+  <text class="label" x="1150" y="215">Serveur</text>
+  <text class="text" x="1150" y="246">NestJS / Prisma</text>
+  <text class="port" x="1150" y="273">API - port 3005</text>
+  <text class="small" x="1065" y="315">Authentification</text>
+  <text class="small" x="1065" y="340">Logique métier</text>
+  <text class="small" x="1065" y="365">Permissions et notifications</text>
+
+  <!-- AI -->
+  <rect class="box-ai" x="1030" y="480" width="300" height="210"/>
+  <circle class="icon-ai" cx="1090" cy="540" r="28"/>
+  <path d="M1080 540 c10 -20 30 -20 20 0 c10 20 -10 20 -20 0 z" fill="#ffffff"/>
+  <text class="label" x="1150" y="535">Service IA</text>
+  <text class="text" x="1150" y="566">FastAPI / Uvicorn</text>
+  <text class="port" x="1150" y="593">Inférence - port 8001</text>
+  <text class="small" x="1065" y="635">Prétraitement des images</text>
+  <text class="small" x="1065" y="660">Classification</text>
+  <text class="small" x="1065" y="685">Score de confiance</text>
+
+  <!-- DB -->
+  <rect class="box-db" x="540" y="585" width="320" height="160"/>
+  <ellipse class="icon-db" cx="600" cy="635" rx="28" ry="14"/>
+  <path d="M572 635 v38 c0 8 56 8 56 0 v-38" fill="none" stroke="#c77700" stroke-width="4"/>
+  <ellipse cx="600" cy="673" rx="28" ry="14" fill="none" stroke="#c77700" stroke-width="4"/>
+  <text class="label" x="660" y="635">Base de données</text>
+  <text class="text" x="660" y="666">PostgreSQL</text>
+  <text class="port" x="660" y="693">port 5433</text>
+  <text class="small" x="575" y="725">Utilisateurs, projets, images, annotations</text>
+
+  <!-- Auth -->
+  <rect class="box-db" x="70" y="585" width="300" height="160"/>
+  <circle class="icon-db" cx="130" cy="642" r="26"/>
+  <path d="M122 642 h20 M137 642 v14 h-10" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text class="label" x="190" y="635">Supabase Auth</text>
+  <text class="text" x="190" y="666">GoTrue</text>
+  <text class="port" x="190" y="693">JWT / OAuth</text>
+  <text class="small" x="105" y="725">Connexion et validation des comptes</text>
+
+  <!-- Arrows -->
+  <path class="arrow2" d="M370 355 H535"/>
+  <text class="small" x="455" y="334" text-anchor="middle">Requêtes HTTP</text>
+
+  <path class="arrow2" d="M860 320 C930 290 965 265 1025 255"/>
+  <text class="small" x="945" y="276" text-anchor="middle">/nest/api</text>
+
+  <path class="arrow2" d="M1180 370 V475"/>
+  <text class="small" x="1210" y="425">images à analyser</text>
+
+  <path class="arrow2" d="M1030 590 C945 600 920 655 865 665"/>
+  <text class="small" x="950" y="636" text-anchor="middle">résultats</text>
+
+  <path class="arrow" d="M1030 270 C955 370 925 585 865 650"/>
+  <text class="small" x="946" y="495" text-anchor="middle">Prisma ORM</text>
+
+  <path class="dash" d="M540 665 H375"/>
+  <text class="small" x="455" y="642" text-anchor="middle">Auth / JWT</text>
+
+  <path class="dash" d="M540 425 C450 505 390 590 375 645"/>
+  <text class="small" x="435" y="558" text-anchor="middle">GoTrue via Kong</text>
+
+  <!-- Footer -->
+  <text class="subtitle" x="700" y="810" text-anchor="middle">Le client communique avec Kong, le serveur orchestre les traitements, et le service IA réalise l'inférence.</text>
+</svg>

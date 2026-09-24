@@ -1,0 +1,21 @@
+{
+  "crop_id": "e081b8c9",
+  "image_id": "flr11pmt55758050_portsfax 2019-09-30 20h06_Cropped_With_Scalebar_28",
+  "image_url": "local_upload",
+  "pred_class": "Autres",
+  "confidence": 1.0,
+  "probabilities": {
+    "Alexandrium": 0.0,
+    "Autres": 1.0,
+    "Karenia": 0.0
+  },
+  "crop_path": "static/results/autres_e081b8c9_flr11pmt55758050_portsfax_2019-09-30_20h06_Cropped_With_Scal.jpg",
+  "pending_fname": "autres_e081b8c9_flr11pmt55758050_portsfax_2019-09-30_20h06_Cropped_With_Scal.jpg",
+  "bbox": [
+    48,
+    49,
+    113,
+    107
+  ],
+  "validated": false
+}

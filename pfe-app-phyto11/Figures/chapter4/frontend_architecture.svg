@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font-family:Arial,sans-serif;font-size:34px;font-weight:700;fill:#1f4e79}
+      .sub{font-family:Arial,sans-serif;font-size:17px;fill:#475569}.box{fill:#fff;stroke:#2e75b6;stroke-width:3;rx:16}
+      .core{fill:#edf4ff;stroke:#1f4e79;stroke-width:4;rx:18}.green{fill:#eef8f3;stroke:#1e7a52;stroke-width:3;rx:16}
+      .yellow{fill:#fff7e8;stroke:#c77700;stroke-width:3;rx:16}.label{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#0f172a}
+      .txt{font-family:Arial,sans-serif;font-size:16px;fill:#334155}.small{font-family:Arial,sans-serif;font-size:14px;fill:#475569}
+      .arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto"><polygon points="0 0,12 4,0 8" fill="#334155"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="850"/>
+  <text class="title" x="700" y="62" text-anchor="middle">Architecture de l'interface client</text>
+  <text class="sub" x="700" y="95" text-anchor="middle">Application monopage Vue.js/Vite connectée à la passerelle Kong</text>
+
+  <rect class="core" x="510" y="140" width="380" height="130"/>
+  <text class="label" x="700" y="185" text-anchor="middle">Application Vue.js 3</text>
+  <text class="txt" x="700" y="216" text-anchor="middle">Vite - SPA - port 3001</text>
+  <text class="small" x="700" y="244" text-anchor="middle">main.ts initialise Router, Pinia, i18n, Element Plus et composants UI</text>
+
+  <rect class="box" x="80" y="345" width="230" height="120"/>
+  <text class="label" x="195" y="385" text-anchor="middle">Vue Router</text>
+  <text class="txt" x="195" y="416" text-anchor="middle">Navigation</text>
+  <text class="small" x="195" y="442" text-anchor="middle">pages et guards</text>
+
+  <rect class="box" x="350" y="345" width="230" height="120"/>
+  <text class="label" x="465" y="385" text-anchor="middle">Pinia</text>
+  <text class="txt" x="465" y="416" text-anchor="middle">État global</text>
+  <text class="small" x="465" y="442" text-anchor="middle">auth, projets, notifications</text>
+
+  <rect class="box" x="620" y="345" width="230" height="120"/>
+  <text class="label" x="735" y="385" text-anchor="middle">i18n</text>
+  <text class="txt" x="735" y="416" text-anchor="middle">Internationalisation</text>
+  <text class="small" x="735" y="442" text-anchor="middle">français par défaut</text>
+
+  <rect class="box" x="890" y="345" width="230" height="120"/>
+  <text class="label" x="1005" y="385" text-anchor="middle">Element Plus</text>
+  <text class="txt" x="1005" y="416" text-anchor="middle">Composants UI</text>
+  <text class="small" x="1005" y="442" text-anchor="middle">locale française</text>
+
+  <rect class="box" x="1160" y="345" width="180" height="120"/>
+  <text class="label" x="1250" y="385" text-anchor="middle">Day.js</text>
+  <text class="txt" x="1250" y="416" text-anchor="middle">Dates</text>
+  <text class="small" x="1250" y="442" text-anchor="middle">formatage</text>
+
+  <rect class="green" x="140" y="575" width="250" height="120"/>
+  <text class="label" x="265" y="615" text-anchor="middle">Vues</text>
+  <text class="txt" x="265" y="646" text-anchor="middle">Dashboard, projets</text>
+  <text class="small" x="265" y="672" text-anchor="middle">upload, annotations, admin</text>
+
+  <rect class="green" x="440" y="575" width="250" height="120"/>
+  <text class="label" x="565" y="615" text-anchor="middle">Composants</text>
+  <text class="txt" x="565" y="646" text-anchor="middle">Éléments réutilisables</text>
+  <text class="small" x="565" y="672" text-anchor="middle">menus, boutons, listes</text>
+
+  <rect class="yellow" x="740" y="575" width="260" height="120"/>
+  <text class="label" x="870" y="615" text-anchor="middle">Variables Vite</text>
+  <text class="txt" x="870" y="646" text-anchor="middle">API URL, Site URL</text>
+  <text class="small" x="870" y="672" text-anchor="middle">clé publique, redirections</text>
+
+  <rect class="yellow" x="1050" y="575" width="250" height="120"/>
+  <text class="label" x="1175" y="615" text-anchor="middle">Kong API</text>
+  <text class="txt" x="1175" y="646" text-anchor="middle">http://localhost:8015</text>
+  <text class="small" x="1175" y="672" text-anchor="middle">/nest, /auth, /rest</text>
+
+  <path class="arrow" d="M700 270 C560 310 245 320 195 345"/>
+  <path class="arrow" d="M700 270 C610 305 500 320 465 345"/>
+  <path class="arrow" d="M700 270 C705 310 730 320 735 345"/>
+  <path class="arrow" d="M700 270 C825 305 970 320 1005 345"/>
+  <path class="arrow" d="M700 270 C960 300 1230 320 1250 345"/>
+  <path class="arrow" d="M465 465 C430 520 320 535 265 575"/>
+  <path class="arrow" d="M735 465 C700 520 620 540 565 575"/>
+  <path class="arrow" d="M1005 465 C970 520 910 540 870 575"/>
+  <path class="arrow" d="M870 695 H1045"/>
+</svg>

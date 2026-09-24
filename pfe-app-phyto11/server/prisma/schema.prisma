@@ -1,0 +1,164 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator prismaCRUDGenerator {
+  provider = "npx prisma-generator-crud"
+  output   = "./generated"
+}
+
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+model User {
+  id                   String              @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt            DateTime            @default(now())
+  updatedAt            DateTime?           @updatedAt
+  deletedAt            DateTime?
+  firstName            String?
+  lastName             String?
+  username             String              @unique
+  isValid              Boolean?
+  roles                String[]
+  userRole             String?
+  email                String?             @unique
+  status               UserStatus          @default(EN_ATTENTE)
+  annotations          Annotation[]
+  collaborators        Collaborator[]
+  notificationsCreated Notification[]      @relation("NotificationCreatedBy")
+  notifications        Notification[]      @relation("UserNotifications")
+  projects             Project[]
+  permissionsGranted   ProjectPermission[] @relation("GrantedPermissions")
+  projectPermissions   ProjectPermission[] @relation("UserPermissions")
+}
+
+model AppConfig {
+  id        String    @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  deletedAt DateTime?
+  value     String?
+  key       String?   @unique
+}
+
+model Project {
+  id            String              @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime?           @updatedAt
+  deletedAt     DateTime?
+  title         String
+  description   String?
+  tool          String?
+  userId        String?             @default(dbgenerated("requesting_user_id()"))
+  collaborators Collaborator[]
+  images        Image[]
+  user          User?               @relation(fields: [userId], references: [id])
+  permissions   ProjectPermission[]
+}
+
+model Image {
+  id          String       @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime?    @updatedAt
+  deletedAt   DateTime?
+  name        String
+  url         String?
+  projectId   String
+  annotations Annotation[]
+  project     Project      @relation(fields: [projectId], references: [id])
+}
+
+model AiModel {
+  id          String       @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime?    @updatedAt
+  deletedAt   DateTime?
+  name        String
+  type        String
+  annotations Annotation[]
+}
+
+model Annotation {
+  id            String    @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime? @updatedAt
+  deletedAt     DateTime?
+  aimodelId     String
+  imageId       String
+  result        String?
+  url           String?
+  validatedById String?
+  aimodel       AiModel   @relation(fields: [aimodelId], references: [id])
+  image         Image     @relation(fields: [imageId], references: [id])
+  validatedBy   User?     @relation(fields: [validatedById], references: [id])
+}
+
+model Collaborator {
+  id        String    @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  deletedAt DateTime?
+  userId    String    @default(dbgenerated("requesting_user_id()"))
+  projectId String
+  project   Project   @relation(fields: [projectId], references: [id])
+  user      User      @relation(fields: [userId], references: [id])
+}
+
+model Notification {
+  id           String           @id @default(dbgenerated("gen_random_uuid()"))
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime?        @updatedAt
+  deletedAt    DateTime?
+  userId       String
+  createdById  String?
+  message      String
+  type         NotificationType
+  isRead       Boolean          @default(false)
+  projectId    String?
+  annotationId String?
+  createdBy    User?            @relation("NotificationCreatedBy", fields: [createdById], references: [id])
+  user         User             @relation("UserNotifications", fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ProjectPermission {
+  id          String    @id @default(uuid())
+  projectId   String
+  userId      String
+  grantedById String
+  canView     Boolean   @default(false)
+  canUpload   Boolean   @default(false)
+  canAnnotate Boolean   @default(false)
+  canValidate Boolean   @default(false)
+  canEdit     Boolean   @default(false)
+  canDelete   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  expiresAt   DateTime?
+  isActive    Boolean   @default(true)
+  grantedBy   User      @relation("GrantedPermissions", fields: [grantedById], references: [id])
+  project     Project   @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user        User      @relation("UserPermissions", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, userId])
+  @@index([projectId])
+  @@index([userId])
+  @@index([isActive])
+  @@map("project_permissions")
+}
+
+enum UserStatus {
+  EN_ATTENTE
+  ACTIF
+  DESACTIVE
+  REJETE
+  BLOOM_ALERT
+}
+
+enum NotificationType {
+  ACTIVATION
+  REJECTION
+  CLASSIFICATION
+  VALIDATION
+}
